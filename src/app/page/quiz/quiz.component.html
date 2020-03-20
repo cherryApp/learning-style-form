@@ -1,0 +1,29 @@
+<div *ngIf="(list$ | async) as list" class="row mt-3">
+  <div class="col-12">
+
+    <div class="list-group">
+      <button
+        *ngFor="let item of list" href="#"
+        class="list-group-item list-group-item-action"
+        [class.active]="item.answer"
+        (click)="item.answer = !item.answer">
+        {{ item.content }}
+      </button>
+    </div>
+
+    <button (click)="getResult(list)" class="btn btn-block btn-primary mt-5 mb-5">
+      ÉRTÉKELÉS
+    </button>
+
+  </div>
+</div>
+
+
+<div *ngIf="showResult" class="row">
+  <div class="col-12">
+    <h3>Cselekvő: {{ result[0] }}</h3>
+    <h3>Szemlélő: {{ result[1] }}</h3>
+    <h3>Elméleti: {{ result[2] }}</h3>
+    <h3>Gyakorlatias: {{ result[3] }}</h3>
+  </div>
+</div>
