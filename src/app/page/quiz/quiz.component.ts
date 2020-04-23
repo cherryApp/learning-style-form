@@ -13,6 +13,8 @@ export class QuizComponent implements OnInit {
   list$ = this.questionService.list$;
   result = [0, 0, 0, 0];
   showResult = false;
+  update = 1;
+  chartData: number[] = [65, 59, 80, 81];
   check = [
     [1, 4, 12, 18, 22, 24, 25, 27, 36, 40],
     [8, 10, 11, 16, 19, 21, 23, 29, 31, 32],
@@ -38,7 +40,7 @@ export class QuizComponent implements OnInit {
     }
 
     this.result = currentResult;
-    this.showResult = true;
+    this.update++;
   }
 
 }

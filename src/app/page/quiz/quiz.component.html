@@ -6,12 +6,12 @@
         *ngFor="let item of list" href="#"
         class="list-group-item list-group-item-action"
         [class.active]="item.answer"
-        (click)="item.answer = !item.answer">
+        (click)="item.answer = !item.answer; getResult(list)">
         {{ item.content }}
       </button>
     </div>
 
-    <button (click)="getResult(list)" class="btn btn-block btn-primary mt-5 mb-5">
+    <button (click)="showResult = true" class="btn btn-block btn-primary mt-5 mb-5">
       ÉRTÉKELÉS
     </button>
 
@@ -19,11 +19,14 @@
 </div>
 
 
-<div *ngIf="showResult" class="row">
-  <div class="col-12">
+<div [hidden]="!showResult" class="row">
+  <!-- <div class="col-12">
     <h3>Cselekvő: {{ result[0] }}</h3>
     <h3>Szemlélő: {{ result[1] }}</h3>
     <h3>Elméleti: {{ result[2] }}</h3>
     <h3>Gyakorlatias: {{ result[3] }}</h3>
+  </div> -->
+  <div class="col-12 mt-3 mb-3">
+    <app-chart [data]="result" [update]="update"></app-chart>
   </div>
 </div>
