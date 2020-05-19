@@ -47,7 +47,7 @@ export class QuestionService {
     new Question(36, 'Gyorsan megunom a módszeres részletes munkát.', false),
     new Question(37, 'Örömmel kutatom az alapvető feltételezéseket, valamint a dolgokat és az eseményeket alátámasztó elveket és elméleteket.', false),
     new Question(38, 'Szeretem, ha az értekezletek a kitűzött napirend betartásával módszeresen zajlanak le.', false),
-    new Question(39, 'kNagy ívben kerülöm a szubjektív és a kétértelmű témákat.kk', false),
+    new Question(39, 'Nagy ívben kerülöm a szubjektív és a kétértelmű témákat.', false),
     new Question(40, 'Élvezem a krízisből adódó drámai helyzetet és izgalmat.', false),
   ]);
 
